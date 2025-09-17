@@ -4,10 +4,13 @@ It's basic demonstration on how to Create, Read, Update and Delete items using t
 
 
 # FEATURES
-POST (create) -> /item/ #creating item
-GET (read) -> /item/{item_id} #retrieving item by item_id
-PUT (update) ->  /item/{item_id} #updating item by item_id
-DELETE -> /item/{item_id} #deleting item by item_id
+POST (create) -> /item/ #creating item:
+
+GET (read) -> /item/{item_id} #retrieving item by item_id:
+
+PUT (update) ->  /item/{item_id} #updating item by item_id:
+
+DELETE -> /item/{item_id} #deleting item by item_id:
 
 This is using a fake database
 

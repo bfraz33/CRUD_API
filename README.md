@@ -31,6 +31,8 @@ To test this you can add 2 items.
 
 To add items, in powershell run:
 
+# ADD
+
 ITEM 1:
 
 $item = @{
@@ -54,4 +56,24 @@ Invoke-RestMethod -Uri "http://127.0.0.1:8000/items/2" -Method POST -Body $item 
 Using POST this adds the items.
 
 In your IDE, upon starting your server it provided you with this, http://127.0.0.1:8000. In a browser you can paste that http, followed by an endpoint, for example. http://127.0.0.1:8000/items/1. This will return our first item.
+
+# UPDATE
+
+$item = @{
+    name = "Laptop"
+    model = "Chromebook"
+    price = 475
+} | ConvertTo-Json
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/items/1" -Method PUT -Body $item -ContentType "application/json"
+
+# DELETE
+
+$item = @{
+    name = "Laptop"
+    model = "Chromebook"
+    price = 475
+} | ConvertTo-Json
+
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/items/1" -Method DELETE
 

@@ -11,7 +11,6 @@ class Item(BaseModel):
 items = {}
 
 #Post -> Create
-
 @app.post("/items/{item_id}")
 def create_item(item_id: int, item: Item):
     items[item_id] = item

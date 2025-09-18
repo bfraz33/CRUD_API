@@ -10,21 +10,21 @@ class Item(BaseModel):
 
 items = {}
 
-#Post -> Create
+#Post ->  Create
 @app.post("/items/{item_id}")
 def create_item(item_id: int, item: Item):
     items[item_id] = item
     return {"message": "Item created", "item": item}
 
 
-#Get -> Retrieve
+#Get ->  Retrieve
 @app.get("/items/{item_id}")
 def read_item(item_id: int):
     if item_id in items:
         return items[item_id]
     return {"error": "Item not found"}
 
-#Put -> Update
+#Put ->  Update
 @app.put("/items/{item_id}")
 def update_item(item_id: int, item: Item):
     if item_id in items:
@@ -32,7 +32,7 @@ def update_item(item_id: int, item: Item):
        return{"message": "Item updated", "item": item}
     return{"error": "Item not found"}
 
-#Delete -> Delete
+#Delete ->  Delete
 @app.delete("/items/{item_id}")
 def delete_item(item_id: int):
     if item_id in items:

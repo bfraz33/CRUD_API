@@ -21,7 +21,10 @@ Install FastAPI
 
 uvicorn
 
-# TESTING
+# INSTALLATION / TESTING
+
+-Clone this repo https://github.com/bfraz33/CRUD_API.git
+
 To test this you can add 2 items.
 
 -In your project folder from the main.py, run "uvicorn main:app --reload" to start your server.

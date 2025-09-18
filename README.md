@@ -16,5 +16,7 @@ This is using a fake database
 
 # REQUIREMENTS
 Python 3.8+
+
 Install FastAPI
+
 uvicorn
